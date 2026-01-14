@@ -8,11 +8,15 @@ CONTROL_NAMES = {0: "NUL", 1: "SOH", 2: "STX", 3: "ETX", 4: "EOT", 5: "ENQ", 6: 
                  25: "EM", 26: "SUB", 27: "ESC",}
 
 buffer = ""
+caps_on = False
 
 def print_binary(event):
-    global buffer
+    global buffer, caps_on
     key = event.name
 
+    if key == "caps lock":
+        caps_on = not caps_on 
+        return
     if key == "space":
         char = " "
     elif key == "enter":
@@ -27,7 +31,7 @@ def print_binary(event):
            buffer = " ".join(buffer.split(" ")[:-1]) + " "
         return
     elif len(key) == 1:
-        char = key
+        char = key.upper() if caps_on else key
     else:
         return 
 
