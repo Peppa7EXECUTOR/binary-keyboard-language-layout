@@ -9,14 +9,27 @@ CONTROL_NAMES = {0: "NUL", 1: "SOH", 2: "STX", 3: "ETX", 4: "EOT", 5: "ENQ", 6: 
 
 buffer = ""
 caps_on = False
+pause_button = False
 
 def print_binary(event):
-    global buffer, caps_on
+    global buffer, caps_on, should_exit, pause_button
     key = event.name
-
+ 
+    if key == "f1":
+        should_exit = True
+        keyboard.unhook_all()
+        return
+    if key == "f3":
+        pause_button = not pause_button
+        print("Paused" if pause_button else "Resumed")
+        return
+    if pause_button:
+        return
+    
     if key == "caps lock":
         caps_on = not caps_on 
         return
+    
     if key == "space":
         char = " "
     elif key == "enter":
