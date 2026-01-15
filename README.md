@@ -14,3 +14,6 @@ A simple, fully developed keyboard layout that turns your normal keyboard into a
 
 Note: The terminal window is not closed automatically. This is expected behavior. The **'os' library** could be added.
 
+# Contributing
+
+Suggestions, bug reports, and pull requests are welcome.
