@@ -3,7 +3,8 @@
 A simple, fully developed keyboard layout that turns your normal keyboard into a binary typing machine. 
 
 ##  How to start the program
-- **cd** to the directory and install dependencies:
+- clone the repo `git clone https://github.com/Peppa7EXECUTOR/binary-keyboard-language-layout.git`
+- **cd** to the directory(`binary-keyboard-language-layout`) and install dependencies:
 `pip install -r  requirements.txt`
 -  After this, run:
 `python binary_keyboard.py`
