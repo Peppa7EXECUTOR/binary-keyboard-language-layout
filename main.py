@@ -1,5 +1,25 @@
 import keyboard
 
+
+print(r'''
+ ____  _                      
+| __ )(_)_ __   __ _ _ __ _   _
+|  _ \| | '_ \ / _` | '__| | | |
+| |_) | | | | | (_| | |  | |_| |
+|____/|_|_| |_|\__,_|_|   \__, |
+                          |___/ 
+      
+ _               _                         _
+| | _____ _   _ | |__   ___   __ _ _ __ __| |
+| |/ / _ \ | | || '_ \ / _ \ / _` | '__/ _` |
+|   <  __/ |_| || |_) | (_) | (_| | | | (_| |
+|_|\_\___|\__, ||_.__/ \___/ \__,_|_|  \__,_|
+           |___/
+
+
+MIT License, Project by Peppa7EXECUTOR
+      ''')
+
 ASCII_TO_BINARY = {chr(i): f"{i:08b}" for i in range(128)}
 
 CONTROL_NAMES = {0: "NUL", 1: "SOH", 2: "STX", 3: "ETX", 4: "EOT", 5: "ENQ", 6: "ACK", 
@@ -17,6 +37,7 @@ def print_binary(event):
     key = event.name
 
     if key == "f1":
+        print("Bye Bye!")
         keyboard.unhook_all()
         return
     if key == "f3":
