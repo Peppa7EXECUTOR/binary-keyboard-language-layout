@@ -2,6 +2,8 @@
 
 A simple, fully developed keyboard layout that turns your normal keyboard into a binary typing machine. 
 
+It started as a learning project, but i think someone would find it somewhat helpful or use it just for fun(games, chat, etc/).
+
 ##  How to start the program
 - clone the repo `git clone https://github.com/Peppa7EXECUTOR/binary-keyboard-language-layout.git`
 - **cd** to the directory(`binary-keyboard-language-layout`) and install dependencies:
