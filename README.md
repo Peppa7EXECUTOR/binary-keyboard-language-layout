@@ -17,8 +17,10 @@ It started as a learning project, but i think someone would find it somewhat hel
 - When **F1** is pressed, the program stops
 - When **F3** is pressed, the program pauses/continues
 
-Note: The terminal window is not closed automatically. This is expected behavior. The **'os' library** could be added.
-
+#### Notes: 
+- The terminal window is not closed automatically. This is expected behavior. The **'os' library** could be added.
+- Not all buttons are recommended to be as **PAUSE/STOP** keys
+recommended examples: `"f1-12", "scroll lock", "up", "down", "left", "right", "pause", "print screen", "insert", "alt","right alt" "num lock", "esc", "caps lock", "page up", "page down", "home", "end", "delete", "ctrl", "right ctrl"`
 # Contributing
 
 Suggestions, bug reports, and pull requests are welcome.

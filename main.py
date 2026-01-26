@@ -30,21 +30,25 @@ CONTROL_NAMES = {0: "NUL", 1: "SOH", 2: "STX", 3: "ETX", 4: "EOT", 5: "ENQ", 6: 
 
 buffer = ""
 caps_on = False
-pause_button = False
+paused = False
+
+# Choose KEYS for stop and pause
+PAUSE_KEY = "right alt" 
+STOP_KEY = "f1"
 
 def print_binary(event):
-    global buffer, caps_on, pause_button
+    global buffer, caps_on, paused
     key = event.name
 
-    if key == "f1":
+    if key == STOP_KEY:
         print("\nBye Bye!")
         keyboard.unhook_all()
         return
-    if key == "f3":
-        pause_button = not pause_button
-        print("Paused" if pause_button else "Resumed")
+    if key == PAUSE_KEY:
+        paused = not paused
+        print("Paused" if paused else "Resumed")
         return
-    if pause_button:
+    if paused:
         if key == "space":
             keyboard.write(" ")
         elif key == "enter":
