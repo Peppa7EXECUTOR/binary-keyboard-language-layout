@@ -5,9 +5,11 @@ A simple, fully developed keyboard layout that turns your normal keyboard into a
 It started as a learning project, but i think someone would find it somewhat helpful or use it just for fun(games, chat, etc/).
 
 ##  How to start the program
-- clone the repo `git clone https://github.com/Peppa7EXECUTOR/binary-keyboard-language-layout.git`
-- **cd** to the directory(`binary-keyboard-language-layout`) and install dependencies:
-`pip install -r  requirements.txt`
+- clone the repo:
+`git clone https://github.com/Peppa7EXECUTOR/binary-keyboard-language-layout.git`
+- **cd** to the directory(`binary-keyboard-language-layout`)
+- Install dependencies: 
+`pip install -r requirements.txt`
 -  After this, run:
 `python binary_keyboard.py`
 
