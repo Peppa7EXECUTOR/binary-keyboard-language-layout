@@ -14,7 +14,7 @@ pause_button = False
 def print_binary(event):
     global buffer, caps_on, should_exit, pause_button
     key = event.name
- 
+
     if key == "f1":
         should_exit = True
         keyboard.unhook_all()
@@ -24,7 +24,18 @@ def print_binary(event):
         print("Paused" if pause_button else "Resumed")
         return
     if pause_button:
+        if key == "space":
+            keyboard.write(" ")
+        elif key == "enter":
+            keyboard.write("\n")
+        elif key == "tab":
+            keyboard.write("\t")
+        elif key == "backspace":
+            keyboard.send("backspace")
+        elif len(key) == 1:
+            keyboard.write(key)
         return
+
     
     if key == "caps lock":
         caps_on = not caps_on 
