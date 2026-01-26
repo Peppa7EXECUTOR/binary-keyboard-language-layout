@@ -37,7 +37,7 @@ def print_binary(event):
     key = event.name
 
     if key == "f1":
-        print("Bye Bye!")
+        print("\nBye Bye!")
         keyboard.unhook_all()
         return
     if key == "f3":
